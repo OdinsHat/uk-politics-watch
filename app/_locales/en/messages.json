@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "UK Politics Watch",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Keep tabs on your local MP and search major political sources for UK political info",
+    "description": "The description of the application"
+  }
+}
