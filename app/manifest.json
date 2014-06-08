@@ -24,7 +24,7 @@
   },
   "options_page": "options.html",
   "omnibox": {
-    "keyword": "UK Politics Watch"
+    "keyword": "ukpol"
   },
   "content_scripts": [
     {
