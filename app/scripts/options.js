@@ -1,4 +1,7 @@
-'use strict';
+(function () {
+    'use strict';
+    var txtPostcode;
+    var btnSave;
 
 var postcodeTextbox;
 var saveButton;
@@ -18,10 +21,7 @@ function save() {
   markClean();
 }
 
-function markDirty() {
-  saveButton.disabled = false;
-}
-
-function markClean() {
-  saveButton.disabled = true;
-}
+    btnSave.addEventListener('click', save);
+    txtPostcode.addEventListener('change', markDirty);
+    window.onload(init);
+})();
