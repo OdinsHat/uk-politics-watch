@@ -3,23 +3,26 @@
     var txtPostcode;
     var btnSave;
 
-var postcodeTextbox;
-var saveButton;
+    function save() {
+        localStorage.postcode = txtPostcode.value;
+        markClean();
+    }
 
-init();
+    function markDirty() {
+        btnSave.disabled = false;
+    }
 
-function init() {
-  postcodeTextbox = document.getElementById("postcode");
-  saveButton = document.getElementById("save-button");
+    function markClean() {
+        btnSave.disabled = true;
+    }
 
-  postcodeTextbox.value = localStorage.postcode || "";
-  markClean();
-}
+    function init() {
+        txtPostcode = document.getElementById('txt-postcode');
+        btnSave = document.getElementById('btn-save');
 
-function save() {
-  localStorage.postcode = postcodeTextbox.value;
-  markClean();
-}
+        txtPostcode.value = localStorage.postcode || '';
+        markClean();
+    }
 
     btnSave.addEventListener('click', save);
     txtPostcode.addEventListener('change', markDirty);
