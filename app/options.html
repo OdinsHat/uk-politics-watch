@@ -16,6 +16,20 @@
         <!-- endbuild -->
     </head>
     <body>
-      <h1>'Allo, 'Allo!</h1>
+        <h1>Settings</h1>
+
+        <p>
+        Enter your post code below and data for your MP will be retried when-
+        clicking the button in the browser bar.
+        </p>
+
+        <label for="postcode">Post Code</label>
+        <input type="text" id="postcode" oninput="markDirty()">
+
+        <footer>
+            <button id="save-button" style="font-weight:bold" onclick="save()">Save</button>
+            <button onclick="init()">Cancel</button>
+        </footer>
+
     </body>
 </html>
