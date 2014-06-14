@@ -10,8 +10,8 @@ chrome.omnibox.onInputChanged.addListener(
     function(text, suggest) {
         console.log('inputChanged (search hansard): ' + text);
         suggest([
-            {content: text + ' one', description: "the first one"},
-            {content: text + ' number two', description: "the second entry"}
+            {content: text + ' one', description: 'the first one'},
+            {content: text + ' number two', description: 'the second entry'}
         ]);
     }
 );
@@ -19,7 +19,7 @@ chrome.omnibox.onInputChanged.addListener(
 chrome.omnibox.onInputEntered.addListener(
     function(text) {
         console.log('inputEntered: ' + text);
-        alert('You just typed "' + text + '"');
+        console.log('You just typed "' + text + '"');
     }
 );
 
