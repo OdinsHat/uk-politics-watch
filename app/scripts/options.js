@@ -20,11 +20,15 @@
         txtPostcode = document.getElementById('txt-postcode');
         btnSave = document.getElementById('btn-save');
 
+        btnSave.addEventListener('click', save);
+        txtPostcode.addEventListener('change', markDirty);
+
         txtPostcode.value = localStorage.postcode || '';
         markClean();
     }
 
-    btnSave.addEventListener('click', save);
-    txtPostcode.addEventListener('change', markDirty);
-    window.onload(init);
+    window.onload = function () {
+        init();
+    };
+
 })();
