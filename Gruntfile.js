@@ -109,6 +109,7 @@ module.exports = function (grunt) {
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
+                ignores: ['<%= config.app %>/scripts/bootstrap.min.js'],
                 reporter: require('jshint-stylish')
             },
             all: [
@@ -130,8 +131,8 @@ module.exports = function (grunt) {
         // Automatically inject Bower components into the HTML file
         bowerInstall: {
             app: {
-                src: [ 
-                     '<%= config.app %>/*.html'
+                src: [
+                    '<%= config.app %>/*.html'
                 ]
             }
         },
@@ -241,7 +242,7 @@ module.exports = function (grunt) {
                         '{,*/}*.html',
                         'styles/{,*/}*.css',
                         'styles/fonts/{,*/}*.*',
-                        '_locales/{,*/}*.json',
+                        '_locales/{,*/}*.json'
                     ]
                 }]
             }

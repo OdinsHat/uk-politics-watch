@@ -1,11 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <!-- bower:css -->
         <!-- endbower -->
 
-        <!-- build:css styles/main.css -->
-        <link href="styles/main.css" rel="stylesheet">
+        <!-- build:css styles/options.css -->
+        <link href="styles/options.css" rel="stylesheet">
         <!-- endbuild -->
 
         <!-- bower:js -->
@@ -16,6 +16,20 @@
         <!-- endbuild -->
     </head>
     <body>
-      <h1>'Allo, 'Allo!</h1>
+        <h1>Settings</h1>
+
+        <p>
+        Enter your post code below and data for your MP will be retried when-
+        clicking the button in the browser bar.
+        </p>
+
+        <label for="postcode">Post Code</label>
+        <input type="text" id="txt-postcode" name="postcode" />
+
+        <footer>
+            <button id="btn-save">Save</button>
+            <button id="btn-cancel">Cancel</button>
+        </footer>
+
     </body>
 </html>

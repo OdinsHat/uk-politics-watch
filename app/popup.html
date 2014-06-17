@@ -1,21 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>        
+    <head>
+        <meta charset="utf-8" />
         <!-- bower:css -->
         <!-- endbower -->
 
-        <!-- build:css styles/main.css -->
-        <link href="styles/main.css" rel="stylesheet">
+        <!-- build:css styles/main.min.css -->
+        <link href="styles/bootstrap.min.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
         <!-- endbuild -->
 
         <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <!-- endbower -->
 
-        <!-- build:js scripts/popup.js -->
+        <!-- build:js scripts/popup-tabs.min.js -->
         <script src="scripts/popup.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         <!-- endbuild -->
     </head>
-    <body>
-      <h1>'Allo, 'Allo!</h1>
+    <body id="uk-politics-watch">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-header pull-left">
+                &nbsp;
+            </div>
+            <div class="navbar-header pull-right" style="margin-right:20px">
+                <button type="button" class="btn btn-default btn-xs navbar-btn">MP Profile</button>
+                <button type="button" class="btn btn-default btn-xs navbar-btn">Wikipedia</button>
+                <button type="button" class="btn btn-default btn-xs navbar-btn">BBC Profile</button>
+                <button type="button" class="btn btn-default btn-xs navbar-btn">News</button>
+                <button type="button" class="btn btn-default btn-xs navbar-btn">Stats</button>
+            </div>
+        </div>
+        <div class="container" id="uk-pol-watch">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="mp-panel" style="display:none">
+                        <div id="mp-info">
+                            <h2>Your Local MP</h2>
+                            <div id="mp-photo"></div>
+                            <div id="mp-name"></div>
+                            <div id="mp-const"></div>
+                            <div id="mp-links"></div>
+                            <br style="clear:both;" />
+                        </div>
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" id="infoTabs">
+                          <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                          <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                          <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                          <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content" id="infoTabsContent">
+                            <div class="tab-pane active" id="home">
+                                <h2>Latest Parliamentry Activity</h2>
+                                <div id="mp-hansard">
+                                    <img src="images/ajax-loader.gif" />
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="profile">...</div>
+                            <div class="tab-pane" id="messages">...</div>
+                            <div class="tab-pane" id="settings">...</div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
