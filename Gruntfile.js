@@ -109,6 +109,7 @@ module.exports = function (grunt) {
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
+                ignores: ['<%= config.app %>/scripts/bootstrap.min.js'],
                 reporter: require('jshint-stylish')
             },
             all: [
