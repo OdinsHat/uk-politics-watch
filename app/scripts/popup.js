@@ -4,7 +4,15 @@
 function handleError(e) {
     console.log(e);
 }
-
+/**
+ * Construct the links for the given person ID
+ *
+ * @param  integer  personId the person ID as defined by the TWFY API
+ * @return null
+ *
+ * @todo turn this entire mess into a module that passes
+ *       around a person obect instead of id therefore no more multiple calls
+ */
 function constructLinks(personId) {
     var links, linkEl, xhr, resp;
     links = {
@@ -34,6 +42,15 @@ function constructLinks(personId) {
     };
 }
 
+/**
+ * Get Hansard records for the given person ID
+ *
+ * @param  integer personId     the person ID as defined by the TWFY API
+ * @return null
+ *
+ * @todo return the data - don't place it in the DOM. This is old code. Forgive me this code is horrible.
+ *       It all needs re-writing. What the hell is with all the console out debug outputs left in here?
+ */
 function getHansard(personId) {
     var i, hxhr, resp, entries, hSec, occurTime, hCont;
     var hansardUrl = 'http://www.theyworkforyou.com/api/getHansard?key=ABJnrLB6q9YnBnVN5rEfNKT7&person=' + personId;
@@ -101,6 +118,11 @@ function getMPData() {
     }
 }
 
+/**
+ * Main initialisation function which is run when the button is pressed.
+ *
+ * @return null
+ */
 function init() {
     try {
         var postcode = localStorage.postcode;
@@ -117,6 +139,7 @@ function init() {
     }
 }
 
-window.onload = function () {
+$(document).ready(function(){
     init();
-};
+});
+
